@@ -3,4 +3,5 @@
 *.obj
 *.pdb
 *.ilk
+maze_escape_gui_res.o
 build/

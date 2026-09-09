@@ -30,6 +30,7 @@
 #include <random>
 #include <ctime>
 #include <sstream>
+#include <climits>
 
 #pragma comment(lib, "msimg32")   // AlphaBlend / GradientFill
 

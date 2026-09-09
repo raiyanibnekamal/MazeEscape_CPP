@@ -1,5 +1,5 @@
 // Embeds the dungeon-themed app icon into maze_escape_gui.exe.
 // Compiled separately with windres, then linked in alongside the .cpp
-// (see build.bat / README.txt for the exact commands).
+// (see build.bat / README.md for the exact commands).
 #define IDI_APPICON 500
 IDI_APPICON ICON "maze_icon.ico"

@@ -5,13 +5,14 @@
       "includePath": [
         "${workspaceFolder}/**"
       ],
+      "defines": [
+        "_WIN32",
+        "WIN32_LEAN_AND_MEAN"
+      ],
       "compilerPath": "C:/Program Files/CodeBlocks/MinGW/bin/gcc.exe",
-      "cStandard": "${default}",
-      "cppStandard": "${default}",
-      "intelliSenseMode": "windows-gcc-x64",
-      "compilerArgs": [
-        ""
-      ]
+      "cStandard": "c17",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "windows-gcc-x64"
     }
   ],
   "version": 4

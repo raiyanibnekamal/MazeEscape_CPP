@@ -1,0 +1,26 @@
+name: Build Windows EXE
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install MinGW
+        run: choco install mingw -y --no-progress
+
+      - name: Build
+        shell: cmd
+        run: build.bat
+
+      - name: Upload maze_escape_gui.exe
+        uses: actions/upload-artifact@v4
+        with:
+          name: MazeEscape
+          path: maze_escape_gui.exe
