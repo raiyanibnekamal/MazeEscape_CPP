@@ -1,12 +1,20 @@
-# Maze Escape (C++ / Win32)
+# Maze Escape
 
-A Windows GUI maze game. Walk with WASD or the on-screen buttons, pick up items, dodge enemies, and reach the exit. Built with the Windows API only (no extra libraries).
+Maze Escape is a small Windows desktop maze game written in C++ with the Win32 API and GDI. Explore a randomly generated dungeon, collect useful items, avoid enemies, use hints to find the exit, and try to finish with the highest score.
 
-Uses a graph for the maze, BFS for hints, Dijkstra for enemy chase, a stack for undo, and a queue for the action log.
+The project is also a practical data-structures and algorithms demonstration: the maze is a graph, maze generation uses an iterative depth-first backtracker, hints use BFS, enemy movement uses Dijkstra's algorithm, undo uses a stack, and the action history uses a queue.
 
-## Run from GitHub
+![Build status](https://github.com/raiyanibnekamal/MazeEscape_CPP/actions/workflows/build.yml/badge.svg)
 
-This is a **Windows** app. Clone the repo, then either double-click `run.bat` or press **F5** in VS Code / Cursor.
+## Download and play
+
+**Windows:** [Download the latest Maze Escape release](https://github.com/raiyanibnekamal/MazeEscape_CPP/releases/latest/download/maze_escape_gui.exe), then run `maze_escape_gui.exe`.
+
+The download link is updated automatically whenever a version tag is pushed. You can also download the executable from the [latest GitHub release](https://github.com/raiyanibnekamal/MazeEscape_CPP/releases).
+
+## Build from source
+
+Clone the repository and run the included script from a Windows Command Prompt or PowerShell:
 
 ```bash
 git clone https://github.com/raiyanibnekamal/MazeEscape_CPP.git
@@ -14,15 +22,11 @@ cd MazeEscape_CPP
 run.bat
 ```
 
-You need **MinGW g++** on PATH (CodeBlocks MinGW, [WinLibs](https://winlibs.com/), or MSYS2).
+You need **MinGW g++** and `windres` on PATH. [MSYS2](https://www.msys2.org/), [WinLibs](https://winlibs.com/), and Code::Blocks MinGW are suitable options.
 
-### VS Code / Cursor
+### VS Code
 
-1. Open the cloned folder.
-2. Press **F5** (or Run → Start Debugging).
-3. The default task builds `maze_escape_gui.exe` and launches the window.
-
-You can also run **Terminal → Run Build Task**, then double-click `maze_escape_gui.exe`.
+Open the cloned folder and press **F5**. The default build task compiles `maze_escape_gui.exe` and launches the game. You can also run `build.bat` directly.
 
 ### Manual build
 
@@ -30,13 +34,7 @@ You can also run **Terminal → Run Build Task**, then double-click `maze_escape
 build.bat
 ```
 
-Or:
-
-```bat
-g++ maze_escape_gui.cpp maze_escape_gui_res.o -o maze_escape_gui.exe -std=c++17 -mwindows -lgdi32 -lmsimg32
-```
-
-GitHub Actions also builds the `.exe` on every push. Download it from the **Actions** tab → latest workflow → **MazeEscape** artifact.
+The GitHub Actions workflow builds the Windows executable on every push and publishes it as a release asset for version tags such as `v1.0.0`.
 
 ## Controls
 
@@ -50,3 +48,11 @@ GitHub Actions also builds the `.exe` on every push. Download it from the **Acti
 | New Maze | Start a new maze |
 
 Pick Small (5×5), Medium (7×7), or Large (9×9) on the start screen, type a name, then click **Begin**.
+
+## About
+
+This project is designed as a self-contained Win32 C++ game with no third-party runtime libraries. It combines a playable dungeon adventure with clear examples of graph traversal, shortest-path search, game-state management, and native Windows GUI programming.
+
+## License
+
+Maze Escape is available under the [MIT License](LICENSE).
