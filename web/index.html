@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Maze Escape, a browser maze game built with HTML5 Canvas.">
+  <title>Maze Escape | Web Edition</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">MAZE ESCAPE / WEB EDITION</p>
+        <h1>Find the exit. Outsmart the dark.</h1>
+      </div>
+      <a class="source-link" href="https://github.com/raiyanibnekamal/MazeEscape_CPP" target="_blank" rel="noreferrer">View source <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <section class="game-layout" aria-label="Maze Escape game">
+      <div class="board-wrap">
+        <div class="board-heading">
+          <span id="status">Ready for a new expedition</span>
+          <span id="turn-count">TURN 0</span>
+        </div>
+        <canvas id="maze" width="620" height="620" aria-label="Maze board"></canvas>
+        <div class="mobile-controls" aria-label="Movement controls">
+          <button data-move="n" aria-label="Move north">↑</button>
+          <div><button data-move="w" aria-label="Move west">←</button><button data-move="s" aria-label="Move south">↓</button><button data-move="e" aria-label="Move east">→</button></div>
+        </div>
+      </div>
+
+      <aside class="side-panel">
+        <div class="stats-grid">
+          <div><span>HEALTH</span><strong id="health">100</strong></div>
+          <div><span>SCORE</span><strong id="score">0</strong></div>
+          <div><span>ROOM</span><strong id="room">--</strong></div>
+          <div><span>DIFFICULTY</span><strong id="difficulty">--</strong></div>
+        </div>
+        <div class="health-track"><span id="health-bar"></span></div>
+
+        <div class="panel-section">
+          <h2>Actions</h2>
+          <div class="action-grid">
+            <button id="pickup" class="action-button">✦ Pick up</button>
+            <button id="hint" class="action-button">⌁ Hint <small>-5</small></button>
+            <button id="undo" class="action-button">↶ Undo</button>
+            <button id="new-game" class="action-button">＋ New maze</button>
+          </div>
+        </div>
+        <div class="panel-section">
+          <h2>Inventory</h2>
+          <ul id="inventory" class="inventory"><li>Empty</li></ul>
+        </div>
+        <div class="panel-section log-section">
+          <h2>Action log</h2>
+          <ol id="log" class="log"></ol>
+        </div>
+        <p class="key-hint">Move with <b>WASD</b> or arrow keys. Reach the gold exit before the enemies catch you.</p>
+      </aside>
+    </section>
+  </main>
+
+  <div id="overlay" class="overlay">
+    <form id="start-form" class="dialog">
+      <p class="eyebrow">A NEW DESCENT</p>
+      <h2 id="dialog-title">Maze Escape</h2>
+      <p id="dialog-copy">Choose a size, enter your name, and find the sunlit room.</p>
+      <div class="difficulty-picker">
+        <label><input type="radio" name="difficulty" value="0" checked><span>Small<small>5 × 5</small></span></label>
+        <label><input type="radio" name="difficulty" value="1"><span>Medium<small>7 × 7</small></span></label>
+        <label><input type="radio" name="difficulty" value="2"><span>Large<small>9 × 9</small></span></label>
+      </div>
+      <label class="name-label" for="player-name">Explorer name</label>
+      <input id="player-name" maxlength="24" placeholder="Enter your name" autocomplete="off">
+      <button class="primary-button" type="submit" id="begin">Begin expedition <span>→</span></button>
+    </form>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

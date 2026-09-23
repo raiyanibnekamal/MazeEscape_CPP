@@ -10,6 +10,8 @@ The project is also a practical data-structures and algorithms demonstration: th
 
 **Windows:** [Download the latest Maze Escape release](https://github.com/raiyanibnekamal/MazeEscape_CPP/releases/latest/download/maze_escape_gui.exe), then run `maze_escape_gui.exe`.
 
+**Browser:** [Play the live Web Edition](https://raiyanibnekamal.github.io/MazeEscape_CPP/). It is the same maze adventure rebuilt for HTML5 Canvas, so it works without installing anything.
+
 The download link is updated automatically whenever a version tag is pushed. You can also download the executable from the [latest GitHub release](https://github.com/raiyanibnekamal/MazeEscape_CPP/releases).
 
 ## Build from source
@@ -35,6 +37,8 @@ build.bat
 ```
 
 The GitHub Actions workflow builds the Windows executable on every push and publishes it as a release asset for version tags such as `v1.0.0`.
+
+The web edition is deployed automatically to GitHub Pages whenever `web/` changes on `main`.
 
 ## Controls
 
