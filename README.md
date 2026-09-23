@@ -5,12 +5,13 @@ Maze Escape is a small Windows desktop maze game written in C++ with the Win32 A
 The project is also a practical data-structures and algorithms demonstration: the maze is a graph, maze generation uses an iterative depth-first backtracker, hints use BFS, enemy movement uses Dijkstra's algorithm, undo uses a stack, and the action history uses a queue.
 
 ![Build status](https://github.com/raiyanibnekamal/MazeEscape_CPP/actions/workflows/build.yml/badge.svg)
+[![Live web edition](https://img.shields.io/badge/Play-live%20web%20edition-1f8a70)](https://raiyanibnekamal.github.io/MazeEscape_CPP/)
 
 ## Download and play
 
 **Windows:** [Download the latest Maze Escape release](https://github.com/raiyanibnekamal/MazeEscape_CPP/releases/latest/download/maze_escape_gui.exe), then run `maze_escape_gui.exe`.
 
-**Browser:** [Play the live Web Edition](https://raiyanibnekamal.github.io/MazeEscape_CPP/). It is the same maze adventure rebuilt for HTML5 Canvas, so it works without installing anything.
+**Live demo:** [Play Maze Escape in your browser](https://raiyanibnekamal.github.io/MazeEscape_CPP/). The web edition is rebuilt with HTML5 Canvas, so it works without installing anything.
 
 The download link is updated automatically whenever a version tag is pushed. You can also download the executable from the [latest GitHub release](https://github.com/raiyanibnekamal/MazeEscape_CPP/releases).
 
